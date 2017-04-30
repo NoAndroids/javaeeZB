@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--window 代表一个html文档对象  frameset中出现了几个 html 文档,就会有几个 window 对象-->
+<script type="text/javascript">
+
+    //open 方法
+   // window.open(URL,name,features,replace);
+    //参数1 新开窗口的地址
+    //2 新开窗口的名字 没用
+    //参数3 定义的新窗口的特性
+    //4 是否用新窗口的浏览记录替换老的
+    //返回值,新打开的 window 对象
+    var window2 = window.open("http://www.baidu.com",'width=200,height=100');
+    alert(window2)
+</script>
+</body>
+</html>

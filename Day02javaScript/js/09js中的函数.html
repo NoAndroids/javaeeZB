@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+        //js 中函数是一个对象  object
+        //函数对象的声明方式
+        function fun1() {
+            alert("啊啊啊啊啊啊")
+        }
+
+        alert(fun1.toString())//function 重写了 tostring, 默认输出函数的完整定义
+//方式2
+        var fun2=new Function("a","b","alert(a+b)");//方法的定义方式2,以,分割,最后一个是方法实现,前面的都是参数
+        //相当于
+        function fun2(a,b) {
+            alert(a+b)
+        }
+
+        //方式3
+        var fun3=function () {
+            alert("bbbbb")
+        }
+
+       alert(fun2(1,2))
+
+        fun2=1;
+
+        alert(fun2(1,2))//会出错,因为 fun2已经不再是一个函数了
+    </script>
+</head>
+<body>
+
+</body>
+</html>

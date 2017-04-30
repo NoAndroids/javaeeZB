@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Title</title>
+        <style type="text/css">
+            #one {
+                width: 200px;
+                height: 200px;
+                border: 1px red solid;
+            }
+            #two {
+                width: 100px;
+                height: 100px;
+                border: 1px red solid;
+            }
+        </style>
+
+
+    <script type="text/javascript">
+        window.onload=function () {
+            var one = document.getElementById("one");
+            var two = document.getElementById("two");
+            one.onclick=function () {
+                alert("one")
+            }
+            two.onclick=function (event) {
+                alert("two")
+                //拦截 one 的执行
+                event.stopPropagation()//终止事件冒泡,也就是当这里执行完成后事件被拦截,不会继续分发
+            }
+        }
+    </script>
+
+
+    </head>
+    <body>
+        <div id="one">
+
+            <div id="two"></div>
+
+        </div>
+    </body>
+
+
+
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+    <script type="text/javascript">
+      /*  var json=[{"provice":"山东"},{"provice":"河南"},{"provice":"北京"}]
+        var allCitys=[["北京市","济南市","潍坊","青岛"],["郑州市","开封市","洛阳市","新乡市"],["海淀区","朝阳区","昌平区","通州区"]]*/
+
+      var json=[{"provice":"山东","city":["北京市","济南市","潍坊","青岛"]},{"provice":"河南","city":["郑州市","开封市","洛阳市","新乡市"]},{"provice":"北京","city":["海淀区","朝阳区","昌平区","通州区"]}]
+        window.onload=function () {
+            //获取数据
+            var one = document.getElementById("one");
+            for(var i=0;i<json.length;i++){
+                var option = document.createElement("option");
+                option.innerHTML=json[i].provice
+                one.appendChild(option);
+
+            }
+        }
+        /**
+         * 切换省对应的市
+         */
+        function change(obj) {
+            var two=document.getElementById("two")
+            two.length=1
+                //知道当前选中的是哪个省
+            var index = obj.selectedIndex;//当前选中的下标
+            if(index==0){//选中的是请选择
+
+            } else{
+                //在根据省的位置去 json 中获取对应 市的集合
+                 //var citys=allCitys[index-1];
+                var citys=json[index-1].city;
+                //遍历集合.将市加到另外一个下拉框中
+                for(var i=0;i<citys.length;i++){
+                    var option = document.createElement("option");
+                    option.innerHTML=citys[i]
+                    two.appendChild(option);
+
+                }
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <table>
+
+        <tr>
+
+            <td>
+                <select   id="one" onchange="change(this)">
+                <option>--请选择---</option>
+
+
+                </select>
+
+            </td>
+
+
+
+            <td >
+                <select  style="margin-left: 150px"  id="two">
+
+                    <option>--请选择---</option>
+
+                </select>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

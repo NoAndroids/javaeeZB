@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Title</title>
+
+    </head>
+    <body><!--注释-->
+
+        <a href="01介绍.html" id="one">戳你</a>
+    </body>
+    <script type="text/javascript">
+
+        //document
+        //浏览器创建的 document 是只读
+        var document = window.document;
+        /* alert(document.nodeName)
+         alert(document.nodeValue)
+         alert(document.nodeType)*/
+        //element
+        var elementById = document.getElementById("one");
+       /* alert(elementById.nodeName)
+        alert(elementById.nodeValue)
+        alert(elementById.nodeType)*/
+        //注释
+
+
+        //属性
+        var attribute = elementById.getAttributeNode("href");
+
+        /*alert(attribute.nodeName)
+        alert(attribute.nodeValue)
+        alert(attribute.nodeType)*/
+        //文本
+
+        var text = elementById.firstChild;
+      /*  alert(text.nodeName)
+        alert(text.nodeValue)
+        alert(text.nodeType)*/
+      var commons = document.getElementsByTagName("body")[0].firstChild;
+        alert(commons.nodeName)
+        alert(commons.nodeValue)
+        alert(commons.nodeType)
+    </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Title</title>
+
+    </head>
+    <body>
+        <div id="one">
+
+                <div id="two" class="tow" name="two"></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+       //document.getElementById("two")//可以的
+        var one = document.getElementById("one");
+      //  var two = one.getElementById("two");//不行的
+
+        var nodeList = one.getElementsByTagName("div");//在 one 内部查找 div 可以的
+     //   alert(nodeList[0])
+        var nodeList2 = one.getElementsByClassName("tow");//可以的
+        var nodeList3 = one.getElementsByName("two");//不可以
+        alert(nodeList3[0])
+    </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Title</title>
+        <style type="text/css">
+            div {
+                width: 200px;
+                height: 200px;
+                border: 1px red solid;
+            }
+        </style>
+
+
+    <script type="text/javascript">
+        window.onload=function () {
+        var form = document.getElementById("one");
+            form.onsubmit=function (event) {
+                alert("提交了")
+               // return false;//会拦截原始的提交效果, true 会放行,让原始操作继续
+           // event.preventDefault();//拦截事件,和 return false 一个效果
+            }
+        }
+    </script>
+
+
+    </head>
+    <body>
+       <form action="01介绍.html" id="one">
+
+            <input type="text" name="name" /><br>
+           <input type="submit" value="name" />
+
+       </form>
+    </body>
+
+
+
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //setInterval(code,millisec[,"lang"])
+    //clearInterval() 方法可取消由 setInterval() 设置的 timeout。 clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。
+        var id = window.setInterval(abc,3000);//设置循环的定时器, 参数1 要执行的函数的名字, 没有(),参数2 间隔时间
+
+        function abc() {
+            alert("aaaaa")
+        }
+    window.clearInterval(id)//清除指定的定时器
+
+</script>
+</body>
+</html>

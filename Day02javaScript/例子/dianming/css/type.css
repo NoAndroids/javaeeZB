@@ -1,0 +1,20 @@
+.spans{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: aquamarine;
+}
+.selected{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: orange;
+
+
+}

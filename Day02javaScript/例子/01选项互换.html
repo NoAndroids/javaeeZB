@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+      function moveleft1() {
+          var one = document.getElementById("one");
+          var two = document.getElementById("two");
+        //找到左边选中的选中中的第一个
+          var options = one.options;
+          for (var i=0;i<options.length;i++){
+              var option = options[i];
+              if (option.selected){//如果选中了
+                  //移动到 two 那边
+                  two.appendChild(option);
+                  return
+              }
+          }
+
+      }
+      
+      function moveleftselected() {
+          var one = document.getElementById("one");
+          var two = document.getElementById("two");
+          //找到左边选中的选中中的第一个
+          var options = one.options;
+          for (var i=0;i<options.length;i++){
+              var option = options[i];
+              if (option.selected){//如果选中了
+                  //移动到 two 那边
+                  two.appendChild(option);
+                    i--;
+              }
+          }
+
+      }
+      
+      function moveleftall() {
+          var one = document.getElementById("one");
+          var two = document.getElementById("two");
+          var options = one.options;
+          for (var i=0;i<options.length;i++){
+              var option = options[i];
+
+                  //移动到 two 那边
+                  two.appendChild(option);
+                  i--;
+
+          }
+      }
+
+    </script>
+</head>
+<body>
+    <table>
+
+        <tr>
+
+            <td>
+                <select multiple size="10" id="one">
+
+                    <option>选项1</option>
+                    <option>选项2</option>
+                    <option>选项3</option>
+                    <option>选项4</option>
+                    <option>选项5</option>
+                    <option>选项6</option>
+                    <option>选项7 </option>
+
+                </select>
+
+            </td>
+            <td>
+                <input type="button" value=">" onclick="moveleft1()"/><br>
+                <input type="button" value=">>" onclick="moveleftselected()"/><br>
+                <input type="button" value=">>>" onclick="moveleftall()"/><br>
+                <input type="button" value="<" /><br>
+                <input type="button" value="<<" /><br>
+                <input type="button" value="<<<" /><br>
+
+            </td>
+
+
+
+            <td >
+                <select multiple style="margin-left: 150px" size="10" id="two">
+
+
+
+                </select>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

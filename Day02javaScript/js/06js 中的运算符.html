@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+        //js中类型转换用的
+        var a = +"123";//
+        alert(typeof a)
+        var b =-"123";//转成负数
+        alert(b)
+        var c = +"abc";//当被转换的内容不全部是数字的时候,会转换失败,但是仍然是数字类型
+        alert(typeof  c)
+        alert(c)//结果是 NaN  这是一个 not a number, 它属于number类型,是 number 终于描述它不是一个数字的情况
+    </script>
+</head>
+<body>
+
+</body>
+</html>
